@@ -23,3 +23,13 @@ git branch testing      创建一个 testing 分支，需要使用 git branch �
 git checkout testing    切换 分支
 git branch              查看所有分支，会列出所有本地的分支，但不包括远程的分支。
 git branch -a           要查看本地和远程分支，可以加上-a参数：
+
+### ssk  官网指南https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
+ssh-keygen -t rsa -b 4096 -C “------@gmail.com”
+>Enter file in which to save the key (/Users/---/.ssh/id_rsa): mainkey
+% ls | grep mainkey
+ cat mainkey.pub   复制到github  or pbcopy < ~/testkey.pub
+
+ vim ~/.ssh/config
+ ssh-add -K ~/.ssh/id_rsa
+ 
