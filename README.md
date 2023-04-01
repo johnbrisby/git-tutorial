@@ -32,11 +32,18 @@ git branch              查看所有分支，会列出所有本地的分支，�
 git branch -a           要查看本地和远程分支，可以加上-a参数：
 
 ### ssk  官网指南https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
-ssh-keygen -t rsa -b 4096 -C “------@gmail.com”
+>ssh-keygen -t rsa -b 4096 -C “------@gmail.com”
+
 >Enter file in which to save the key (/Users/---/.ssh/id_rsa): mainkey
-% ls | grep mainkey
- cat mainkey.pub   |  pbcopy < ~/testkey.pub  ----- 复制到github 
+
+>% ls | grep mainkey
+用grep快速找出mainkey的文件
+
+ cat mainkey.pub   |  pbcopy < ~/testkey.pub  ----- 复制txt到github 
 
  vim ~/.ssh/config
+
  ssh-add -K ~/.ssh/id_rsa
+
+
  
