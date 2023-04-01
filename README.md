@@ -43,7 +43,20 @@ git branch -a           要查看本地和远程分支，可以加上-a参数：
 
  vim ~/.ssh/config
 
- ssh-add -K ~/.ssh/id_rsa
+ If the file doesn't exist, create the file.
+
+>$ touch ~/.ssh/config
+
+  Host github.com
+
+  AddKeysToAgent yes
+
+  UseKeychain yes
+
+  IdentityFile ~/.ssh/id_rsa
+
+
+ >ssh-add -K ~/.ssh/id_rsa
 
 
  
